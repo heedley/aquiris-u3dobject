@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>External Interface Sample</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	
+	<script src="js/u3dobject.js" type="text/javascript"></script>
+	<script src="js/unitydetect.vbs" language='VBScript'></script>
+	<script src="js/swfobject.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    function initialize()
+	{
+		/*
+		embed("unity/game.unity3d", "div_unity", 900, 500);
+		hide("div_unity");
+		*/
+		
+		//Flash vars an parameters to be passed to the flash clips
+		var flash_var = 
+		{ 
+			root_url: "http://www.aquiris.com.br/"			
+		};
+		
+		//Creates all flash movies in the HTML		
+		swfobject.embedSWF("swf/loader.swf", "flash_content", "100%", "100%", "9.0.0", "swf/expressInstall.swf", flash_var);
+		
+	}
+    </script>
+    <link href="css/default.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onload="initialize();">
+<div id="div_unity" class="div_unity"></div>	
+<div id="flash_content" class="flash_content"></div>
+</body>
+</html>
