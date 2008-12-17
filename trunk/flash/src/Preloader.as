@@ -4,8 +4,6 @@
 	import com.aquiris.unity.mcUnityProfiler;
 	import com.aquiris.unity.UnityInterface;
 	import com.aquiris.unity.UnityProfiler;
-	import core.Global;
-	import core.CoreMovieClip;
 	import flash.display.Loader;
 	import flash.display.MovieClip;
 	import flash.events.ErrorEvent;
@@ -15,38 +13,18 @@
 	import flash.net.navigateToURL;
 	import flash.ui.Keyboard;
 	
-	/**
-	 * Class that will contain all application main instances.
-	 */
-	public class Preloader extends CoreMovieClip 
-	{
-		
-		/**
-		 * Application constructor.
-		 */
+	public class Preloader extends MovieClip 
+	{		
 		public function Preloader():void 
 		{	
-			super("Preloader");			
+			addEventListener(Event.ADDED_TO_STAGE, initialize);
 		}
-		/**
-		 * After the stage being created, initializes all assets
-		 * @param	e Event called upon initialization.
-		 */
-		override public function initialize():void 
+		public function initialize(p_ev:Event=null):void 
 		{	
-			super.initialize();
-			
-			//*******************
-			
-			debug("Initialize");
-			
-			//Start Here
 			var ld:Loader = new Loader();
-			var req:URLRequest = new URLRequest(Global.online ? "swf/application.swf" : "application.swf");			
+			var req:URLRequest = new URLRequest(loaderInfo.parameters["root_url"]!=null ? "swf/application.swf" : "application.swf");
 			ld.load(req);						
-			addChild(ld);			
-			//*******************			
-			
+			addChild(ld);
 		}	
 		
 	

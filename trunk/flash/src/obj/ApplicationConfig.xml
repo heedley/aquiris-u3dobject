@@ -6,13 +6,16 @@
 <flex-config>
   <compiler>
     <source-path append="true">
-      <path-element>C:\[Projetos\flash_ISO\yymmdd_nome_projeto\project\bin</path-element>
-      <path-element>C:\[Projetos\flash_ISO\yymmdd_nome_projeto\project\lib</path-element>
+      <path-element>W:\[aquiris\081217_integration_system\flash\lib</path-element>
+      <path-element>W:\[aquiris\081217_integration_system\html</path-element>
       <path-element>C:\Arquivos de programas\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
+    <library-path append="true">
+      <path-element>W:\[aquiris\081217_integration_system\flash\lib\application_asset.swc</path-element>
+    </library-path>
   </compiler>
   <file-specs>
-    <path-element>C:\[Projetos\flash_ISO\yymmdd_nome_projeto\project\src\Application.as</path-element>
+    <path-element>W:\[aquiris\081217_integration_system\flash\src\Application.as</path-element>
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>80</default-frame-rate>
