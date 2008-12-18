@@ -18,14 +18,9 @@
 		hide("div_unity");
 		*/
 		
-		//Flash vars an parameters to be passed to the flash clips
-		var flash_var = 
-		{ 
-			root_url: "http://www.aquiris.com.br/"			
-		};
 		
 		//Creates all flash movies in the HTML		
-		swfobject.embedSWF("swf/loader.swf", "flash_content", "100%", "100%", "9.0.0", "swf/expressInstall.swf", flash_var);
+		swfobject.embedSWF("swf/loader.swf", "flash_content", "100%", "100%", "9.0.0", "swf/expressInstall.swf", { root_url: "http://www.aquiris.com.br/"});
 		
 	}
     </script>
