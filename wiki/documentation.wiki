@@ -18,3 +18,20 @@ The most pratical way to do these operations is by Javascript in the browser and
  * Can be used together with the most common Flash-Embbeding technology like [http://code.google.com/p/swfobject SWFObject2.0].
  * Offers a Flash/AS3 and Unity3d profilers that can be used to test the communication between applications.
 
+== Profiler? ==
+
+ * A simple application to debug communication between Flash and a Unity3d application. It can call the visibility functions used in order to show and hide the unity content and call functions and events inside it too.
+ * Users can choose the div where the Unity3d is placed and the object inside it that will be called.
+ * It was develop on top of the UnityInterface AS3 class, so most of it's functionality is present in the class source.
+[http://www.thelaborat.org/img/flash_unity_profiler.jpg]
+ * 'Console' shows the reports from Flash and Unity side, if a method is called from inside the Unity3d content it's reported in the console it's name and parameters.
+ * 'Clear' .. well.. it clears the console :)
+ * 'Command' is the place where the user will call methods inside the unity application. The format of function call is the classic one 'function_name(... parameters)' as one String only.
+ * 'Target' is the HTML element where the unity content is placed (e.g. the Div id). The default name choosed is 'div_unity' if you don't specify any.
+ * 'Object' is the name of the Object inside your Unity application that has the methods being called. The default used is "ExternalInterface" used in order to match AS3 code.
+ * 'Visible' tests if your application is being hidden or shown correctly when the JS command for show/hide is called.
+ * 'Width'/'Height' pass the size of the div for the unity application being embbeded.
+ * 'Filename' is just the name of your content's file that will be embbeded.
+ * 'Embbed' button that will embbed your unity application with the passed parameters.
+ * 'Event/Parameter' Name of the event that will be passed to the Unity class 'ExternalEvent' this class name is default. If you want to listen to events passed you need to implement this class. A String parameter can be passed to the event called.
+ * 'Send' button sends the event written in the fields.
